@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    </head>
+    <body>              
+        <nav id="main_nav">
+            <ul>
+                <li><a href="{{ url_for('contact') }}">Contacto</a></li>
+                <li><a href="{{ url_for('about') }}">Sobre mí</a></li>
+                <li><a href="{{ url_for('foto') }}">Foto</a></li> 
+                <li><a href="{{ url_for('video') }}">Video</a></li>                 
+            </ul>
+        </nav>
+        <h1 style="padding-top: 50px; margin-left: 20px;" id="name">RAÚL SÁNCHEZ</h1>
+        <div class="container">            
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
