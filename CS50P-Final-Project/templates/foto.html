@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 style="color:white; margin-left: 20px">FOTO</h2>
+<section class="post-list">
+    {% for foto in list %}
+
+    <a href="static\Foto\{{ foto }}" class="post">
+        <figure class="post-image">
+            <img src="static\Foto\{{ foto }}" alt="{{ foto }}" width="800" height="400">
+        </figure>        
+    </a>
+
+
+    {% endfor %}
+</section>
+{% endblock %}

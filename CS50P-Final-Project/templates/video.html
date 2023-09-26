@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2 style = "color:white; margin-left: 20px">VIDEO</h2>       
+
+    <section class="post-list">
+        {% for video in list %}
+    
+        <a href="" class="post">
+            <figure class="post-image">
+                <video src="static\Video\{{ video }}" type="video/mp4" width="800" height="400" controls>
+            </figure>            
+        </a>
+    
+    
+        {% endfor %}
+    </section>
+
+    
+{% endblock %}

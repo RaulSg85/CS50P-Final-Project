@@ -1,0 +1,110 @@
+body {
+  margin: 0;  
+  background-color: black;
+}
+
+h1,h2,h3 {
+  color: white;
+}
+
+#name {
+  color: white;
+  font-family: 'Trebuchet MS', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 60px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+li {
+  float: right;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: larger;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 25px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #111;
+}
+
+/*Description*/
+.description {
+  width: 800px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 32px;
+  margin-left: 20px;
+  text-align: justify;
+}
+
+.container {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 300px;
+ }
+
+.description-image {
+  max-width: 100%;
+  max-height:100%;
+}
+
+/************************************************************************Photo Gallery*************************************************************************************/
+
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 800px));    
+  justify-content: center;
+  grid-gap: 28px;
+  
+}
+
+.post {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  padding: 10px;
+  background-color: white;
+  border: 5px solid black; 
+   
+}
+
+.post-image {
+  display: flex;
+  justify-content: center;
+  margin: 20px;  
+}
+
+.post-image img {
+  width: 100%;   
+  object-fit: cover; 
+}
+
+.post-image video {
+  width: 100%;   
+  object-fit: cover; 
+}
+
+@media screen and (max-width: 768px) {
+  .post-list {
+    grid-gap: 3px;
+  }
+}
